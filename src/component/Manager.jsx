@@ -49,10 +49,10 @@ const Manager = () => {
         <>
             <div className="absolute top-0 -z-10 h-full w-full bg-blue-50"><div className="absolute bottom-auto left-auto right-0 top-0 h-[500px] w-[500px] -translate-x-[30%] translate-y-[20%] rounded-full bg-[rgba(173,109,244,0.5)] opacity-50 blur-[80px]"></div></div>
 
-            <div className="container mx-auto max-w-4xl bg-slate-50">
+            <div className="container mx-auto max-w-4xl">
 
                 <h1 className='text-4xl text font-bold text-center text-blue-400'>Aashus<span className='text-[rgba(173,109,244,0.5)]'>Pass</span> </h1>
-                <div className='font-bold pl-2 text-center'>Your own secure password manager</div>
+                <div className='font-bold pl-2 text-center'>My own secure password manager</div>
 
                 <div className='flex flex-col p-4'  >
                     <input value={form.site} onChange={handleChange} placeholder='Enter your URL' className='rounded-full border border-blue-500 p-4 py-1' type="text" name='site' id='' />
@@ -90,15 +90,15 @@ const Manager = () => {
 
 
                     
-                    <div className="mt-8 max-w-4xl">
+                    <div className="mt-8  max-w-4xl">
                         <h2 className="text-2xl font-bold text-center mb-4">Stored Passwords</h2>
-                        <table className="  border border-gray-200">
+                        <table className="min-w-full border border-gray-200 max-w-4xl">
                             <thead className='bg-blue-300'>
                                 <tr>
-                                    <th className="border px-4 py-2">S.no</th>
-                                    <th className="border px-4 py-2">Site</th>
-                                    <th className="border px-4 py-2">Username</th>
-                                    <th className="border px-4 py-2" colSpan="3">Password</th>
+                                    <th className="border px-4 py-2" style={{ wordBreak: "break-word" }}>S.no</th>
+                                    <th className="border px-4 py-2" style={{ wordBreak: "break-word" }}>Site</th>
+                                    <th className="border px-4 py-2" style={{ wordBreak: "break-word" }}>Username</th>
+                                    <th className="border px-4 py-2" style={{ wordBreak: "break-word" }} colSpan="3">Password</th>
 
                                 </tr>
                             </thead>
@@ -106,11 +106,11 @@ const Manager = () => {
                                 {passwordArray.length > 0 ? (
                                     passwordArray.map((item, index) => (
                                         <tr key={index}>
-                                            <td className="border px-4 py-2 ">{index + 1}</td>
-                                            <td className="border px-4 py-2 ">{item.site}</td>
-                                            <td className="border px-4 py-2">{item.username}</td>
-                                            <td className="border px-4 py-2 relative">{item.password}</td>
-                                            <td className="border px-4 py-2 relative">
+                                            <td className="border px-4 py-2 " style={{ wordBreak: "break-word" }}>{index + 1}</td>
+                                            <td className="border px-4 py-2 " style={{ wordBreak: "break-word" }}><span>{item.site}</span></td>
+                                            <td className="border px-4 py-2" style={{ wordBreak: "break-word" }}>{item.username}</td>
+                                            <td className="border px-4 py-2 relative" style={{ wordBreak: "break-word" }}>{item.password}</td>
+                                            <td className="border px-4 py-2 relative" style={{ wordBreak: "break-word" }}>
                                                 <span > <button onClick={() => { handleDelete(index) }}>
                                                     <lord-icon
                                                         src="https://cdn.lordicon.com/hwjcdycb.json"
