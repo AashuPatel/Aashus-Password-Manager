@@ -6,9 +6,9 @@ function Navbar() {
       <div className="logo font-bold">Aashus-Pass</div>
       <ul>
         <li className=' flex gap-4'>
-          <a href="#">Home</a>
-          <a href="#">About</a>
-          <a href="#">Contact</a>
+          <a className='font-bold' href="#">Home</a>
+          <a className='font-bold' href="#">About</a>
+          <a className='font-bold' href="#">Contact</a>
         </li>
       </ul>
     </nav>
