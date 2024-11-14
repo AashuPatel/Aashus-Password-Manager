@@ -44,7 +44,7 @@ function Navbar() {
         <div className="logo font-bold">Aashus-Pass</div>
         <ul>
           <li className="flex gap-4">
-            <Link className="font-bold" to="/">Home</Link>
+            <Link className="font-bold" to="/Aashus-Password-Manager/">Home</Link>
             <button className='font-bold' onClick={about}>About</button>
             <button className='font-bold' onClick={contact}>Contact</button>
           </li>
